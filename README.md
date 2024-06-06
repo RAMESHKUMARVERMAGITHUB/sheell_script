@@ -1,2 +1,2 @@
-# sheell_script
+# shell_script
 shell script for DEVOPS automation
