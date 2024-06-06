@@ -1,0 +1,9 @@
+#!/bin/bash
+backup_file="/path/to/backup.tar.gz"
+expected_checksum="expexted_checksum"
+actual_checksum=$(md5sum "$backup_file" | awk '${print $1}')
+if [ "$actual_checksum" == "$expected_checksum" ]; then
+    echo "backup integrity verified"
+else
+    echo "backup integrity compromised"
+fi
